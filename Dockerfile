@@ -35,7 +35,6 @@ WORKDIR /srv/shiny-server/${APP_NAME}
 
 # copy the app directory into the image
 COPY ./app.R .
-COPY ./config.json .
 
 # run app
 EXPOSE 3838
