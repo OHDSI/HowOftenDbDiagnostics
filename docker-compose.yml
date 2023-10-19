@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  HowOften:
+    image: ohdsi/howoften_db_diagnostics
+    env_file: .env
+    build:
+      context: .
+      args:
+        APP_NAME: HowOften_db_diagnostics
+    ports:
+      - "3838:3838"
