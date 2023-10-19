@@ -20,7 +20,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # install R packages required
-RUN R -e 'install.packages(c("remotes", "rJava", "dplyr", "DatabaseConnector),  repos="http://cran.rstudio.com/")'
+RUN R -e 'install.packages(c("remotes", "rJava", "dplyr", "DatabaseConnector"),  repos="http://cran.rstudio.com/")'
 
 RUN R CMD javareconf
 
