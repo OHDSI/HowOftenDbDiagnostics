@@ -24,8 +24,8 @@ RUN R -e 'install.packages(c("remotes", "rJava", "dplyr", "DatabaseConnector"), 
 
 RUN R CMD javareconf
 
-RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules")'
-RUN R -e 'remotes::install_github("OHDSI/ShinyAppBuilder")'
+RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules", repos="http://cran.rstudio.com/")'
+RUN R -e 'remotes::install_github("OHDSI/ShinyAppBuilder", repos="http://cran.rstudio.com/")'
 
 ENV DATABASECONNECTOR_JAR_FOLDER /root
 RUN R -e "DatabaseConnector::downloadJdbcDrivers('postgresql', pathToDriver='/root')"
